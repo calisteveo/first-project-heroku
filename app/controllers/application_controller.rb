@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
   #     render #display meat[:type][:cut] info
   # end    
 
-  response = Typhoeus.get("http://api.yummly.com/v1/api/", params: {_app_id: "id", q: "onion+soup"}
+  #response = Typhoeus.get("http://api.yummly.com/v1/api/", params: {_app_id: "id", q: "onion+soup"}
   # response = Typhoeus.limit(10).get(http://api.yummly.com/v1/api/recipes?_app_id=83795ef3&_app_key=555d7d815f7c59506f3931a1cbbc57df&param[]="#{@user_choice}"||param[]="#{@user_second_choice}"||param[]="#{@user_third_choice}")
   # puts "Here are some recipe suggestions for the item you chose:" response.body
   # end
