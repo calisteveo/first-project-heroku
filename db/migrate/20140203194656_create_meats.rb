@@ -8,6 +8,7 @@ class CreateMeats < ActiveRecord::Migration
       t.string :time
       t.string :internal_temp
       t.string :rest
+      t.string :name
 
       t.timestamps
     end

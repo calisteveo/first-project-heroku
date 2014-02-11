@@ -7,6 +7,8 @@ gem "dotenv", "~> 0.9.0"
 
 gem 'pg'
 
+gem "twitter-bootstrap-rails", "~> 2.2.8"
+
 gem 'rails_12factor', :group => :production
 
 gem "typhoeus", "~> 0.6.7"

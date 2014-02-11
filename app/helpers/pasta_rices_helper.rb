@@ -1,0 +1,2 @@
+module PastaRicesHelper
+end

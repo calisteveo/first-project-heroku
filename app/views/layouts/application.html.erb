@@ -5,6 +5,20 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Below disables form submission on Enter -->
+  <script type="text/javascript"> 
+
+  function stopRKey(evt) { 
+    var evt = (evt) ? evt : ((event) ? event : null); 
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;} 
+  } 
+
+  document.onkeypress = stopRKey; 
+
+  </script>
+
 </head>
 
 <body>
@@ -24,24 +38,26 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "My Profile", current_user %></li>
       <ul class="nav navbar-nav">
-        <li><%= link_to "Sign up", signup_path %></li>
-        <li><%= link_to "Sign in", signin_path %></li>
+        
         <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
           <ul class="dropdown-menu">
-          	<li><a href="#">Meats</a></li>
-          	<li><a href="#">Pasta/Rice</a></li>
-          	<li><a href="#">Sides</a></li>
+           	<li><%= link_to "Meats", meats_path %>
+          	<li><%= link_to "Pasta/Rice", pasta_rices_path %></li>
+          	<li><%= link_to "Sides", sides_path %></li>
             <li class="divider"></li>
-            <li><%= link_to('Mom\'s Cookbook', new_recipe_path) %></li>
+            <li><%= link_to('Mom\'s Cookbook', recipes_path) %></li>
           </ul>
         </li>
     </div> 
   </div>
 </nav> 
-
+<div class="container">
 <%= yield %>
+</div>
 </body>
 </html>

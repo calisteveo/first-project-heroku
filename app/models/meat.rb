@@ -15,4 +15,30 @@
 
 class Meat < ActiveRecord::Base
 
+#           @side.each do |side|    
+#            side["Name"]  
+# 	     end  
+
+# <div class="btn-group">
+#   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+#     Beef <span class="caret"></span>
+#   </button>
+#   <ul class="dropdown-menu" role="menu">
+#     <% @meat.each do |x| %>
+#       <li><a href="meat_path(x)"><%= x.cut %></a></li>
+#       <% end %>
+#   </ul>
+# </div>
+
 end
+
+
+
+
+
+
+
+
+
+
+
