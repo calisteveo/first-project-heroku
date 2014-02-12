@@ -55,8 +55,15 @@ group :development do
 	gem 'pry-rails'
 	gem 'awesome_print'
 	gem 'quiet_assets'
+	gem 'dotenv-rails'
+	gem 'rspec-rails', '~> 3.0.0.beta'
+	gem 'launchy'
+	gem 'database_cleaner'
+	gem 'rb-fsevent', require: false if RUBY_PLATFORM =~ /darwin/i
+	gem 'guard-rspec'
+	gem 'guard-livereload'
 end
-
+ 
 ruby '2.0.0'
 # Use unicorn as the app server
 # gem 'unicorn'
